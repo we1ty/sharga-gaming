@@ -145,7 +145,7 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;backgroun
       <input type="hidden" name="form-name" value="apply">
       <p hidden><label>Не заполняй: <input name="bot-field"></label></p>
       <label>Ник в игре<input name="nick" required maxlength="40"></label>
-      <label>Позиция<select name="role" required><option value="">Выбери</option><option>Керри (Safe Lane)</option><option>Мид (Mid Lane)</option><option>Оффлейн (Off Lane)</option><option>Софт саппорт (Soft Support)</option><option>Хард саппорт (Hard Support)</option></select></label>
+      <label>Позиция<select name="role" required><option value="">Керри (Safe Lane)</option><option>Мид (Mid Lane)</option><option>Оффлейн (Off Lane)</option><option>Софт саппорт (Soft Support)</option><option>Хард саппорт (Hard Support)</option></select></label>
       <label>MMR<input name="mmr" inputmode="numeric" required maxlength="5"></label>
       <label>Твой Telegram для связи<input name="contact" placeholder="@username" required maxlength="40"></label>
       <label class="full">Ссылка на Dotabuff или Steam (по желанию)<input name="profile" maxlength="120"></label>
@@ -169,8 +169,8 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;backgroun
 const TEAM=[
  {role:'Керри',        sub:'Safe Lane',    icon:'r1', nick:'zixurru',  mmr:1500, heroes:['Sven','Juggernaut','Luna']},
  {role:'Мид',          sub:'Mid Lane',     icon:'r2', nick:'frons1',   mmr:2800, heroes:['Keeper Of The Light','Tinker','Ark Warden']},
- {role:'Оффлейн',      sub:'Off Lane',     icon:'r3', nick:'Mafis',         mmr:1000,    heroes:['Earthshaker','Legion Commande','Dragon Knight']},
- {role:'Софт саппорт', sub:'Soft Support', icon:'r4', nick:'Ваня',         mmr:1500,    heroes:['Ringmaster','Zeus','Spirit Breaker']},
+ {role:'Оффлейн',      sub:'Off Lane',     icon:'r3', nick:'Mafis',         mmr:1000,    heroes:['Earthshaker','Legion Commander','Dragon Knight']},
+ {role:'Софт саппорт', sub:'Soft Support', icon:'r4', nick:'Vanya',         mmr:1500,    heroes:['Ringmaster','Zeus','Spirit Breaker']},
  {role:'Хард саппорт', sub:'Hard Support', icon:'r5', nick:'boomboom', mmr:2800, heroes:['Winter Wyvern','Lich','Shadow Shaman']}
 ];
 const TG='https://t.me/zixuru';
