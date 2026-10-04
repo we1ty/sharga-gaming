@@ -126,7 +126,7 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;backgroun
   <section class="grid" id="team">
     <div class="c intro">
       <h2>Sharga<br>Gaming</h2>
-      <p>Любительская команда по Dota 2. Ищем двух игроков в состав.</p>
+      <p>Любительская команда по Dota 2. Ищем игроков в состав.</p>
       <a href="https://t.me/sharga_gaming" target="_blank" rel="noopener" aria-label="Telegram"><svg><use href="#tg"/></svg></a>
     </div>
     <div id="roster" style="display:contents"></div>
@@ -145,7 +145,7 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;backgroun
       <input type="hidden" name="form-name" value="apply">
       <p hidden><label>Не заполняй: <input name="bot-field"></label></p>
       <label>Ник в игре<input name="nick" required maxlength="40"></label>
-      <label>Позиция<select name="role" required><option value="">Выбери</option><option>Керри (Safe Lane)</option><option>Мид (Mid Lane)</option><option>Оффлейн (Off Lane)</option><option>Софт саппорт</option><option>Хард саппорт</option></select></label>
+      <label>Позиция<select name="role" required><option value="">Выбери</option><option>Керри (Safe Lane)</option><option>Мид (Mid Lane)</option><option>Оффлейн (Off Lane)</option><option>Софт саппорт (Soft Support)</option><option>Хард саппорт (Hard Support)</option></select></label>
       <label>MMR<input name="mmr" inputmode="numeric" required maxlength="5"></label>
       <label>Твой Telegram для связи<input name="contact" placeholder="@username" required maxlength="40"></label>
       <label class="full">Ссылка на Dotabuff или Steam (по желанию)<input name="profile" maxlength="120"></label>
@@ -159,7 +159,7 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;backgroun
     <div><h3>Главная</h3><a href="#about">О команде</a></div>
     <div><h3>Команды</h3><a href="#team">Dota 2</a></div>
   </nav>
-  <footer>© Sharga Gaming</footer>
+  <footer>© Sharga Gaming. Сайт сделан @zixuru</footer>
 </div>
 <script>
 // ===================== РЕДАКТИРУЙ ТОЛЬКО ЭТОТ БЛОК =====================
@@ -173,7 +173,7 @@ const TEAM=[
  {role:'Софт саппорт', sub:'Soft Support', icon:'r4', nick:'',         mmr:0,    heroes:[]},
  {role:'Хард саппорт', sub:'Hard Support', icon:'r5', nick:'boomboom', mmr:2800, heroes:['Hoodwink','Lich','Shadow Shaman']}
 ];
-const TG='https://t.me/sharga_gaming';
+const TG='https://t.me/zixuru';
 // =======================================================================
 var esc=function(t){return String(t).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
 var html='';
