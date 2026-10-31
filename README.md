@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/34226371/README.5.md)
 # 🎮 Sharga Gaming — Dota 2 Team Website & Roster Builder
 
 <p align="center">
