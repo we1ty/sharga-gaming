@@ -8,6 +8,11 @@
 <meta name="description" content="Sharga Gaming — любительская команда по Dota 2. Состав, роли и набор игроков. Пиши в Telegram.">
 <meta name="theme-color" content="#000000">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://sharga-gaming.netlify.app/">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <meta property="og:title" content="Sharga Gaming — Dota 2">
 <meta property="og:description" content="Любительская команда по Dota 2. Ищем игроков в состав.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cpath%20d%3D%22M18%204H60V46L46%2060H4V18Z%22%20fill%3D%22%23ff5a1f%22/%3E%3Cpath%20d%3D%22M47%2015.5H25.55L16.75%2024.3V27.7L25.55%2036.5H35.55L39.05%2040L35.55%2043.5H17V50.5H38.45L47.25%2041.7V38.3L38.45%2029.5H28.45L24.95%2026L28.45%2022.5H47Z%22%20fill%3D%22%23000%22/%3E%3C/svg%3E">
@@ -15,7 +20,7 @@
 <style>
 :root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
 --bg:#000;--tx:#fff;--mut:#8c8c8c;--ac:#ff5a1f;--br:#3a3a3a;--ghost:#2c2c2c;color-scheme:dark}
-html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 84px);scroll-behavior:smooth}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
 .h,h1,h2,.nick,.lab,.tab{font-family:Anton,Impact,"Arial Narrow",sans-serif;text-transform:uppercase;font-weight:400;letter-spacing:.5px}
@@ -64,10 +69,10 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;backgroun
 .trk{display:inline-flex;gap:26px;align-items:center;animation:mq 28s linear infinite}
 .trk span{font-family:Anton,Impact,sans-serif;font-size:22px;text-transform:uppercase}
 .trk i{width:10px;height:10px;background:var(--ac);transform:rotate(45deg);flex:none}
-@keyframes mq{to{transform:translateX(-25%)}}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:26px 0 0}
+@keyframes mq{to{transform:translateX(-50%)}}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:26px 0 0}
 .stats div{border:1px solid var(--br);padding:14px 10px;text-align:center}
-.stats b{display:block;font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(26px,7vw,42px);color:var(--ac)}
+.stats b{display:block;font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(26px,7vw,42px);color:var(--ac);text-transform:uppercase}
 .stats span{font-size:12px;color:var(--mut)}
 .num{position:absolute;right:6px;top:18%;font-family:Anton,Impact,sans-serif;font-size:190px;line-height:1;color:#111;pointer-events:none}
 .c>*:not(.num){position:relative;z-index:1}
@@ -76,7 +81,7 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;backgroun
 .c:hover{border-color:var(--ac)}.c:hover .ic svg{transform:scale(1.1) rotate(-3deg)}
 .js .c{opacity:0;transform:translateY(18px)}.js .c.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.trk{animation:none}.js .c{opacity:1;transform:none}}
-.c>.hv{position:absolute;inset:0 0 78px 0;z-index:2;background:rgba(0,0,0,.94);display:flex;flex-direction:column;justify-content:center;gap:8px;padding:16px;opacity:0;transform:translateY(10px);pointer-events:none;transition:opacity .25s,transform .25s}
+.c>.hv{position:absolute;top:0;left:0;right:0;height:calc(100% - 84px);z-index:2;background:rgba(0,0,0,.94);display:flex;flex-direction:column;justify-content:center;gap:8px;padding:16px;opacity:0;pointer-events:none;transition:opacity .3s ease}
 .hv i{font-style:normal;font-size:12px;color:var(--mut);letter-spacing:1px;text-transform:uppercase}
 .hv b{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:24px;color:var(--ac);text-transform:uppercase;margin-bottom:4px}
 .hv span{border:1px solid var(--br);padding:7px 10px;font-size:14px;align-self:flex-start}
@@ -90,20 +95,58 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;backgroun
 .apply input:focus,.apply select:focus,.apply textarea:focus{outline:none;border-color:var(--ac)}
 .apply button{cursor:pointer;font-family:inherit;font-size:16px}.apply button:disabled{opacity:.6}
 #am{font-size:15px}#am.ok{color:#3ecf7a}#am.err{color:#ff6b5a}#am a{color:var(--ac)}
+.w{position:relative;z-index:1}
+.ach{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 14px;max-width:900px}
+@media(min-width:800px){.ach{grid-template-columns:repeat(4,1fr)}}
+.ach div{border:1px solid var(--br);padding:18px 14px;transition:border-color .25s,box-shadow .25s}
+.ach div:hover{border-color:var(--ac);box-shadow:0 0 24px rgba(255,90,31,.25)}
+.ach b{display:block;font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(30px,6vw,44px);line-height:1;color:var(--ac);text-transform:uppercase}
+.ach span{display:block;margin-top:8px;font-size:13px;line-height:1.3;color:var(--tx)}
+.about .note{font-size:12px;margin:0 0 22px;color:var(--mut)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--tx)}
+.brand svg{width:46px;height:46px;flex:none;transition:transform .4s}
+.brand:hover svg{transform:rotate(-12deg) scale(1.08)}
+.bt{font-family:Anton,Impact,sans-serif;font-size:28px;line-height:.82;text-transform:uppercase;letter-spacing:1px;display:flex;flex-direction:column}
+.bt small{font-size:13px;color:var(--ac);letter-spacing:9px;margin-top:4px;font-weight:400}
+.glow{position:fixed;left:0;top:0;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(255,90,31,.16),transparent 65%);pointer-events:none;z-index:0;transform:translate(-50%,-50%);transition:opacity .4s}
+.prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--ac);box-shadow:0 0 12px var(--ac);z-index:30}
+.hero::before{content:"";position:absolute;left:50%;top:55%;width:min(90vw,720px);height:min(90vw,720px);transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(255,90,31,.22),transparent 62%);animation:pulse 5s ease-in-out infinite;pointer-events:none}
+.hero>*{position:relative}
+.hero .em{animation:flt 5s ease-in-out infinite}
+h1{background:linear-gradient(100deg,#fff 30%,#ffb089 50%,#fff 70%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
+@keyframes pulse{50%{opacity:.55;transform:translate(-50%,-50%) scale(1.08)}}
+@keyframes flt{50%{transform:translateY(-12px) rotate(-2deg)}}
+@keyframes shine{to{background-position:-250% 0}}
+.bar{height:3px;background:#222;margin-top:8px;width:120px;max-width:100%}
+.bar i{display:block;height:100%;background:var(--ac);box-shadow:0 0 10px var(--ac)}
+.stt{font-size:clamp(36px,9vw,70px);line-height:.95;margin:70px 0 0}
+.steps{display:grid;grid-template-columns:1fr;gap:16px;margin:22px 0 0}
+@media(min-width:700px){.steps{grid-template-columns:repeat(3,1fr)}}
+.st{border:1px solid var(--br);padding:22px;transition:border-color .25s}
+.st:hover{border-color:var(--ac)}
+.st b{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:72px;line-height:1;color:var(--ac);display:block}
+.st h3{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:26px;text-transform:uppercase;margin:6px 0 8px}
+.st p{margin:0;color:var(--mut);font-size:15px;line-height:1.4}
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s}.js .rv.in{opacity:1;transform:none}
+.btn,.tab,.tg{transition:transform .2s,box-shadow .2s}
+.btn.f:hover,.tab.on:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(255,90,31,.45)}
+.tab:hover,.tg:hover{border-color:var(--ac)}
+@media(prefers-reduced-motion:reduce){.hero::before,.hero .em,h1{animation:none}.js .rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-<symbol id="em" viewBox="0 0 64 64"><path d="M18 4H60V46L46 60H4V18Z" fill="var(--ac)" stroke="none"/><path d="M47.00 15.50 L25.55 15.50 L16.75 24.30 L16.75 27.70 L25.55 36.50 L35.55 36.50 L39.05 40.00 L35.55 43.50 L17.00 43.50 L17.00 50.50 L38.45 50.50 L47.25 41.70 L47.25 38.30 L38.45 29.50 L28.45 29.50 L24.95 26.00 L28.45 22.50 L47.00 22.50Z" fill="var(--bg)" stroke="none"/></symbol>
+<symbol id="em" viewBox="0 0 64 64"><path d="M18 4H60V46L46 60H4V18Z" fill="#ff5a1f" stroke="none"/><path d="M47.00 15.50 L25.55 15.50 L16.75 24.30 L16.75 27.70 L25.55 36.50 L35.55 36.50 L39.05 40.00 L35.55 43.50 L17.00 43.50 L17.00 50.50 L38.45 50.50 L47.25 41.70 L47.25 38.30 L38.45 29.50 L28.45 29.50 L24.95 26.00 L28.45 22.50 L47.00 22.50Z" fill="#000" stroke="none"/></symbol>
 <symbol id="tg" viewBox="0 0 24 24"><path d="M22 3L2 11l7 2.5L11 21l3.5-5 5.5 4z" stroke="none"/></symbol>
 <defs><g id="hd"><path d="M2.5 14.5H6v7H2.5z"/><path d="M6 15.5l3.2-1h5.3a1.5 1.5 0 0 1 0 3H11.5"/><path d="M14.5 17.5l4.2-1.6a1.3 1.3 0 0 1 1 2.4L15 21.5H6"/></g></defs>
 <symbol id="r1" viewBox="0 0 24 24"><g transform="rotate(45 12 12)"><path d="M12 2l2.5 2.5V15h-5V4.5z"/><path d="M6 15h12M12 15v5M10 22h4"/></g></symbol>
 <symbol id="r2" viewBox="0 0 24 24"><g transform="rotate(-45 12 12)"><path d="M7 3Q16 12 7 21"/><path d="M7 3L4 12L7 21"/><path d="M4 12H22M22 12l-4-3M22 12l-4 3"/></g></symbol>
-<symbol id="r3" viewBox="0 0 24 24"><path d="M12 2.5l8 3v6c0 5-3.4 8.8-8 10-4.6-1.2-8-5-8-10v-6z"/><path d="M13.2 6.5L8.8 13.2h3.1l-1.1 4.3 4.4-6.7h-3.1z" fill="var(--ac)" stroke="none"/></symbol>
-<symbol id="r4" viewBox="0 0 24 24"><use href="#hd"/><path d="M12 2.5c.5 2.5 3.5 3.8 3.5 7a3.5 3.5 0 0 1-7 0c0-1.3.6-2.2 1.3-3 .2 1 .8 1.5 1.4 1.5-.3-2.3 0-4 .8-5.5z"/></symbol>
+<symbol id="r3" viewBox="0 0 24 24"><path d="M12 2.5l8 3v6c0 5-3.4 8.8-8 10-4.6-1.2-8-5-8-10v-6z"/><path d="M13.2 6.5L8.8 13.2h3.1l-1.1 4.3 4.4-6.7h-3.1z" fill="#ff5a1f" stroke="none"/></symbol>
+<symbol id="r4" viewBox="0 0 24 24"><use href="#hd"/><path transform="translate(0 -1.5)" d="M12 2.5c.5 2.5 3.5 3.8 3.5 7a3.5 3.5 0 0 1-7 0c0-1.3.6-2.2 1.3-3 .2 1 .8 1.5 1.4 1.5-.3-2.3 0-4 .8-5.5z"/></symbol>
 <symbol id="r5" viewBox="0 0 24 24"><use href="#hd"/><path d="M12 3v7M8.5 6.5h7"/></symbol>
 </svg>
 
+<div class="glow" id="gl"></div><div class="prog" id="pg"></div>
 <div class="w">
   <header class="top">
     <div style="display:flex;align-items:center;gap:12px"><svg viewBox="0 0 64 64"><use href="#em"/></svg><span class="h" style="font-size:24px">Sharga</span></div>
@@ -116,26 +159,39 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;backgroun
     <svg class="em" viewBox="0 0 64 64"><use href="#em"/></svg>
   </section>
 
-  <div class="tick"><div class="trk"><span>Sharga Gaming</span><i></i><span>Dota 2</span><i></i><span>Набор открыт</span><i></i><span>Sharga Gaming</span><i></i><span>Dota 2</span><i></i><span>Набор открыт</span><i></i><span>Sharga Gaming</span><i></i><span>Dota 2</span><i></i><span>Набор открыт</span><i></i><span>Sharga Gaming</span><i></i><span>Dota 2</span><i></i><span>Набор открыт</span><i></i></div></div>
-  <div class="stats"><div><b id="s1">3/5</b><span>игроков в составе</span></div><div><b id="s2">2</b><span>открытых слота</span></div><div><b id="s3">~2270</b><span id="s3l">средний MMR</span></div></div>
+  <div class="tick"><div class="trk"><span>Sharga Gaming</span><i></i><span>Мы играем вместе</span><i></i><span>Dota 2</span><i></i><span>Растём вместе</span><i></i><span>Sharga Gaming</span><i></i><span>Мы играем вместе</span><i></i><span>Dota 2</span><i></i><span>Растём вместе</span><i></i><span>Sharga Gaming</span><i></i><span>Мы играем вместе</span><i></i><span>Dota 2</span><i></i><span>Растём вместе</span><i></i><span>Sharga Gaming</span><i></i><span>Мы играем вместе</span><i></i><span>Dota 2</span><i></i><span>Растём вместе</span><i></i><span>Sharga Gaming</span><i></i><span>Мы играем вместе</span><i></i><span>Dota 2</span><i></i><span>Растём вместе</span><i></i></div></div>
+  <div class="stats"><div><b>Турниры</b><span>каждую неделю</span></div><div><b id="s3">~2270</b><span id="s3l">средний MMR</span></div></div>
   <div class="tabs">
-    <a class="tab on" href="#team">Dota 2</a>
-    <a class="tab" href="#apply">Набор открыт</a>
+    <a class="tab on" href="#team">Наш состав ↓</a>
+    <a class="tab" href="#apply">Вступить →</a>
   </div>
 
   <section class="grid" id="team">
     <div class="c intro">
       <h2>Sharga<br>Gaming</h2>
       <p>Любительская команда по Dota 2. Ищем игроков в состав.</p>
-      <a href="https://t.me/sharga_gaming" target="_blank" rel="noopener" aria-label="Telegram"><svg><use href="#tg"/></svg></a>
+      <a href="https://t.me/dimazzzzzzzzzzz" target="_blank" rel="noopener" aria-label="Telegram"><svg><use href="#tg"/></svg></a>
     </div>
     <div id="roster" style="display:contents"></div>
   </section>
 
+  <h2 class="stt rv">Как попасть в команду</h2>
+  <div class="steps">
+    <div class="st rv"><b>01</b><h3>Заявка</h3><p>Заполни короткую форму: ник, позицию и MMR. Это займёт минуту.</p></div>
+    <div class="st rv"><b>02</b><h3>Знакомство</h3><p>Мы напишем тебе в Telegram и обсудим, как лучше влиться в состав.</p></div>
+    <div class="st rv"><b>03</b><h3>Играем</h3><p>Выходим на турниры, разбираем игры и растём вместе.</p></div>
+  </div>
+
   <section class="about" id="about">
     <h2>Sharga Gaming</h2>
     <p>Играем турниры каждую неделю и растём вместе. Хочешь в команду? Оставь заявку ниже.</p>
-    <div class="btns"><a class="btn f" href="#apply">Подать заявку</a><a class="btn" href="https://t.me/sharga_gaming" target="_blank" rel="noopener">Наш Telegram</a></div>
+    <div class="ach">
+      <div class="rv"><b>5×</b><span>Выиграли 5 мажоров подряд</span></div>
+      <div class="rv"><b>TI 2028</b><span>Чемпионы The International в Москве</span></div>
+      <div class="rv"><b>126</b><span>Героев нерфнули после наших побед (всех)</span></div>
+      <div class="rv"><b>1 из 5</b><span>Игроков всегда знает, где Рошан. Остальные четверо спрашивают в чате</span></div>
+    </div>
+    <div class="btns"><a class="btn f" href="#apply">Подать заявку</a><a class="btn" href="https://t.me/dimazzzzzzzzzzz" target="_blank" rel="noopener">Наш Telegram</a></div>
   </section>
 
   <section class="apply" id="apply">
@@ -146,7 +202,7 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;backgroun
       <p hidden><label>Не заполняй: <input name="bot-field"></label></p>
       <label>Ник в игре<input name="nick" required maxlength="40"></label>
       <label>Позиция<select name="role" required><option value="">Выбери</option><option>Керри (Safe Lane)</option><option>Мид (Mid Lane)</option><option>Оффлейн (Off Lane)</option><option>Софт саппорт (Soft Support)</option><option>Хард саппорт (Hard Support)</option></select></label>
-      <label>MMR<input name="mmr" inputmode="numeric" required maxlength="5"></label>
+      <label>MMR<input name="mmr" inputmode="numeric" required maxlength="5" pattern="[0-9]{3,5}" title="Только цифры, например 2500"></label>
       <label>Твой Telegram для связи<input name="contact" placeholder="@username" required maxlength="40"></label>
       <label class="full">Ссылка на Dotabuff или Steam (по желанию)<input name="profile" maxlength="120"></label>
       <label class="full">О себе (по желанию)<textarea name="about" rows="3" maxlength="500"></textarea></label>
@@ -162,10 +218,11 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;backgroun
   <footer>© Sharga Gaming. Сайт сделан @zixuru</footer>
 </div>
 <script>
-  
+
+// СОСТАВ: меняй здесь. Чтобы позиция была свободной, поставь nick:''
 const TEAM=[
  {role:'Керри',        sub:'Safe Lane',    icon:'r1', nick:'zixurru',  mmr:1900, heroes:['Sven','Phantom Lancer','Terrorblade']},
- {role:'Мид',          sub:'Mid Lane',     icon:'r2', nick:'frons1',   mmr:3100, heroes:['Templar Assasin','Luna','Storm Spirit']},
+ {role:'Мид',          sub:'Mid Lane',     icon:'r2', nick:'frons1',   mmr:3100, heroes:['Templar Assassin','Luna','Storm Spirit']},
  {role:'Оффлейн',      sub:'Off Lane',     icon:'r3', nick:'Mafis',    mmr:1600, heroes:['Earthshaker','Legion Commander','Dragon Knight']},
  {role:'Софт саппорт', sub:'Soft Support', icon:'r4', nick:'Vanya',    mmr:1900, heroes:['Ringmaster','Zeus','Spirit Breaker']},
  {role:'Хард саппорт', sub:'Hard Support', icon:'r5', nick:'boomboom', mmr:2800, heroes:['Winter Wyvern','Lich','Shadow Shaman']}
@@ -173,29 +230,38 @@ const TEAM=[
 const TG='https://t.me/dimazzzzzzzzzzz';
 // =======================================================================
 var esc=function(t){return String(t).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+var RANKS=[[0,'Рекрут'],[770,'Страж'],[1540,'Рыцарь'],[2310,'Герой'],[3080,'Легенда'],[3850,'Властелин'],[4620,'Божество'],[5420,'Титан']];
+function rank(m){var r='Рекрут';RANKS.forEach(function(x){if(m>=x[0])r=x[1]});return r}
 var html='';
 TEAM.forEach(function(p,i){
   var n=i+1,head='<div class="num">'+n+'</div><div class="lab">'+esc(p.role)+'</div><div class="ic"><svg viewBox="0 0 24 24"><use href="#'+p.icon+'"/></svg></div>';
   if(p.nick){
-    html+='<div class="c p" tabindex="0">'+head+'<div class="bot"><div><div class="nick">'+esc(p.nick)+'</div><div class="mmr">MMR ~'+p.mmr+'</div></div><svg><use href="#tg"/></svg></div>'+
+    html+='<div class="c p" tabindex="0">'+head+'<div class="bot"><div><div class="nick">'+esc(p.nick)+'</div><div class="mmr">MMR ~'+p.mmr+' · '+rank(p.mmr)+'</div></div></div>'+
       '<div class="hv"><i>'+esc(p.sub)+'</i><b>Основные герои</b>'+p.heroes.map(function(h){return'<span>'+esc(h)+'</span>'}).join('')+'</div></div>';
   }else{
-    html+='<div class="c free">'+head+'<div class="bot"><div><div class="nick">Ищем игрока</div><div class="mmr">Позиция '+n+' · '+esc(p.sub)+'</div></div><a href="#apply" aria-label="Подать заявку"><svg><use href="#tg"/></svg></a></div></div>';
+    html+='<div class="c free">'+head+'<div class="bot"><div><div class="nick">Ищем игрока</div><div class="mmr">'+esc(p.sub)+'</div></div><a href="#apply" aria-label="Подать заявку"><svg><use href="#tg"/></svg></a></div></div>';
   }
 });
 document.getElementById('roster').innerHTML=html;
 var on=TEAM.filter(function(p){return p.nick}),sum=on.reduce(function(a,p){return a+p.mmr},0);
-document.getElementById('s1').textContent=on.length+'/'+TEAM.length;
-document.getElementById('s2').textContent=TEAM.length-on.length;
 document.getElementById('s3').textContent='~'+(on.length?Math.round(sum/on.length/10)*10:0);
-document.getElementById('s3l').textContent='средний MMR (по '+on.length+')';
+document.getElementById('s3l').textContent='средний MMR';
 if(window.matchMedia&&matchMedia('(hover:none)').matches){document.getElementById('roster').addEventListener('click',function(e){var c=e.target.closest('.p');if(!c)return;document.querySelectorAll('.p.open').forEach(function(x){if(x!==c)x.classList.remove('open')});c.classList.toggle('open')})}
 var af=document.getElementById('af');
 if(af)af.addEventListener('submit',function(e){e.preventDefault();var b=af.querySelector('button'),m=document.getElementById('am');b.disabled=true;m.className='';m.textContent='Отправляем…';
 fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(af)).toString()}).then(function(r){if(!r.ok)throw 0;af.reset();m.className='ok';m.textContent='Заявка отправлена! Мы напишем тебе в Telegram.'}).catch(function(){m.className='err';m.innerHTML='Не получилось отправить. Напиши нам в <a href="'+TG+'" target="_blank" rel="noopener">Telegram</a>.'}).then(function(){b.disabled=false})});
 document.documentElement.classList.add('js');
 try{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
-document.querySelectorAll('.c').forEach(function(c){io.observe(c)})}catch(e){document.querySelectorAll('.c').forEach(function(c){c.classList.add('in')})}
+document.querySelectorAll('.c,.rv').forEach(function(c){io.observe(c)})}catch(e){document.querySelectorAll('.c,.rv').forEach(function(c){c.classList.add('in')})}
+var calm=matchMedia('(prefers-reduced-motion:reduce)').matches,fine=matchMedia('(hover:hover)').matches;
+var gl=document.getElementById('gl'),pg=document.getElementById('pg');
+if(fine&&!calm)addEventListener('mousemove',function(e){gl.style.left=e.clientX+'px';gl.style.top=e.clientY+'px'});else gl.style.display='none';
+addEventListener('scroll',function(){var h=document.documentElement;pg.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight||1)*100)+'%'},{passive:true});
+
+var m3=document.getElementById('s3'),tv=parseInt(m3.textContent.replace(/\D/g,''),10);
+if(tv&&!calm){var t0=performance.now();(function f(t){var k=Math.min(1,(t-t0)/1400);m3.textContent='~'+Math.round(tv*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)})(t0)}
+var ct=af&&af.elements['contact'];
+if(ct)ct.addEventListener('blur',function(){var v=ct.value.trim();if(v&&v[0]!=='@'&&v.indexOf('t.me')<0)ct.value='@'+v});
 </script>
 </body>
 </html>
