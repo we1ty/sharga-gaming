@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/34248587/README.md)
 <h1 align="center">🎮 Sharga Gaming</h1>
 
 <p align="center"><b>Любительская команда по Dota 2.<br>Играем вместе, растём вместе, и нам не всё равно на результат.</b></p>
