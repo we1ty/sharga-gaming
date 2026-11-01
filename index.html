@@ -197,9 +197,8 @@ h1{background:linear-gradient(100deg,#fff 30%,#ffb089 50%,#fff 70%);background-s
   <section class="apply" id="apply">
     <h2>Подать заявку</h2>
     <p>Расскажи о себе, и мы ответим тебе в Telegram.</p>
-    <form name="apply" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" id="af">
-      <input type="hidden" name="form-name" value="apply">
-      <p hidden><label>Не заполняй: <input name="bot-field"></label></p>
+    <form name="apply" id="af">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
       <label>Ник в игре<input name="nick" required maxlength="40"></label>
       <label>Позиция<select name="role" required><option value="">Выбери</option><option>Керри (Safe Lane)</option><option>Мид (Mid Lane)</option><option>Оффлейн (Off Lane)</option><option>Софт саппорт (Soft Support)</option><option>Хард саппорт (Hard Support)</option></select></label>
       <label>MMR<input name="mmr" inputmode="numeric" required maxlength="5" pattern="[0-9]{3,5}" title="Только цифры, например 2500"></label>
@@ -228,6 +227,7 @@ const TEAM=[
  {role:'Хард саппорт', sub:'Hard Support', icon:'r5', nick:'boomboom', mmr:2800, heroes:['Winter Wyvern','Lich','Shadow Shaman']}
 ];
 const TG='https://t.me/dimazzzzzzzzzzz';
+const WORKER_URL='https://sharga-forms.gsgsigsgdu.workers.dev';
 // =======================================================================
 var esc=function(t){return String(t).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
 var RANKS=[[0,'Рекрут'],[770,'Страж'],[1540,'Рыцарь'],[2310,'Герой'],[3080,'Легенда'],[3850,'Властелин'],[4620,'Божество'],[5420,'Титан']];
@@ -249,7 +249,7 @@ document.getElementById('s3l').textContent='средний MMR';
 if(window.matchMedia&&matchMedia('(hover:none)').matches){document.getElementById('roster').addEventListener('click',function(e){var c=e.target.closest('.p');if(!c)return;document.querySelectorAll('.p.open').forEach(function(x){if(x!==c)x.classList.remove('open')});c.classList.toggle('open')})}
 var af=document.getElementById('af');
 if(af)af.addEventListener('submit',function(e){e.preventDefault();var b=af.querySelector('button'),m=document.getElementById('am');b.disabled=true;m.className='';m.textContent='Отправляем…';
-fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(af)).toString()}).then(function(r){if(!r.ok)throw 0;af.reset();m.className='ok';m.textContent='Заявка отправлена! Мы напишем тебе в Telegram.'}).catch(function(){m.className='err';m.innerHTML='Не получилось отправить. Напиши нам в <a href="'+TG+'" target="_blank" rel="noopener">Telegram</a>.'}).then(function(){b.disabled=false})});
+fetch(WORKER_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(af)))}).then(function(r){return r.json()}).then(function(r){if(!r.success)throw 0;af.reset();m.className='ok';m.textContent='Заявка отправлена! Мы напишем тебе в Telegram.'}).catch(function(){m.className='err';m.innerHTML='Не получилось отправить. Напиши нам в <a href="'+TG+'" target="_blank" rel="noopener">Telegram</a>.'}).then(function(){b.disabled=false})});
 document.documentElement.classList.add('js');
 try{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
 document.querySelectorAll('.c,.rv').forEach(function(c){io.observe(c)})}catch(e){document.querySelectorAll('.c,.rv').forEach(function(c){c.classList.add('in')})}
