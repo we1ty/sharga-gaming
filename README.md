@@ -3,7 +3,7 @@
 <p align="center"><b>Любительская команда по Dota 2.<br>Играем вместе, растём вместе, и нам не всё равно на результат.</b></p>
 
 <p align="center">
-  <a href="https://sharga-gaming.netlify.app/"><img src="https://img.shields.io/badge/Сайт-sharga--gaming.netlify.app-ff5a1f?style=for-the-badge" alt="Сайт"></a>
+  <a href="https://we1ty.github.io/sharga-gaming/"><img src="https://img.shields.io/badge/Сайт-открыть-ff5a1f?style=for-the-badge" alt="Сайт"></a>
   <a href="https://t.me/dimazzzzzzzzzzz"><img src="https://img.shields.io/badge/Telegram-написать-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram"></a>
   <img src="https://img.shields.io/badge/Набор-открыт-brightgreen?style=for-the-badge" alt="Набор открыт">
 </p>
@@ -16,7 +16,7 @@
 
 Здесь нет жёстких требований и пафоса. Нужны желание играть в команде и нормальное отношение к тиммейтам.
 
-🌐 **Заходи на сайт:** [sharga-gaming.netlify.app](https://sharga-gaming.netlify.app/)
+🌐 **Заходи на сайт:** [we1ty.github.io/sharga-gaming](https://we1ty.github.io/sharga-gaming/)
 
 ---
 
@@ -44,8 +44,8 @@
 
 ## 🚀 Как вступить
 
-1. Открой [сайт команды](https://sharga-gaming.netlify.app/) и заполни короткую заявку: ник, позицию и MMR.
-2. Мы напишем тебе в Telegram и познакомимся.
+1. Открой [сайт команды](https://we1ty.github.io/sharga-gaming/) и заполни короткую заявку: ник, позицию и MMR. Она сразу прилетит нам в Telegram.
+2. Мы напишем тебе и познакомимся.
 3. Играем вместе!
 
 Если хочется быстрее, пиши напрямую: [**Telegram**](https://t.me/dimazzzzzzzzzzz).
@@ -63,7 +63,7 @@
 
 ## 🎨 О сайте
 
-Дизайн сайта вдохновлён стилистикой игровой платформы [**Yandex.gg**](https://yandex.gg/): тёмный фон, оранжевый акцент и крупные шрифты. Сайт одинаково удобно открывается на компьютере и на телефоне, а размещён на **Netlify**.
+Дизайн сайта вдохновлён стилистикой игровой платформы [**Yandex.gg**](https://yandex.gg/): тёмный фон, оранжевый акцент и крупные шрифты. Сайт одинаково удобно открывается на компьютере и на телефоне и размещён на **GitHub Pages**. Заявки с формы пересылаются в Telegram через небольшую функцию на **Cloudflare Workers**.
 
 ---
 
@@ -73,4 +73,4 @@
 
 ---
 
-<p align="center">© Sharga Gaming</p>
+<p align="center">© Sharga Gaming · Увидимся в лобби 🎮</p>
