@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" alt="Status Active">
   <img src="https://img.shields.io/badge/Stack-HTML5%20%7C%20CSS3-blue?style=for-the-badge" alt="Stack">
-  <img src="https://img.shields.io/badge/Hosting-Netlify-00C4B6?style=for-the-badge" alt="Hosting">[README.md](https://github.com/user-attachments/files/34248556/README.md)<h1 align="center">🎮 Sharga Gaming</h1>
+  <img src="https://img.shields.io/badge/Hosting-Netlify-00C4B6?style=for-the-badge" alt="Hosting">
 
 <p align="center"><b>Любительская команда по Dota 2.<br>Играем вместе, растём вместе, и нам не всё равно на результат.</b></p>
 
