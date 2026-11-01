@@ -73,4 +73,4 @@
 
 ---
 
-<p align="center">© Sharga Gaming · Увидимся в лобби 🎮</p>
+<p align="center">© Sharga Gaming</p>
