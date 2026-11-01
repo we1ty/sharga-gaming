@@ -3,7 +3,84 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" alt="Status Active">
   <img src="https://img.shields.io/badge/Stack-HTML5%20%7C%20CSS3-blue?style=for-the-badge" alt="Stack">
-  <img src="https://img.shields.io/badge/Hosting-Netlify-00C4B6?style=for-the-badge" alt="Hosting">
+  <img src="https://img.shields.io/badge/Hosting-Netlify-00C4B6?style=for-the-badge" alt="Hosting">[README.md](https://github.com/user-attachments/files/34248556/README.md)<h1 align="center">🎮 Sharga Gaming</h1>
+
+<p align="center"><b>Любительская команда по Dota 2.<br>Играем вместе, растём вместе, и нам не всё равно на результат.</b></p>
+
+<p align="center">
+  <a href="https://sharga-gaming.netlify.app/"><img src="https://img.shields.io/badge/Сайт-sharga--gaming.netlify.app-ff5a1f?style=for-the-badge" alt="Сайт"></a>
+  <a href="https://t.me/dimazzzzzzzzzzz"><img src="https://img.shields.io/badge/Telegram-написать-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram"></a>
+  <img src="https://img.shields.io/badge/Набор-открыт-brightgreen?style=for-the-badge" alt="Набор открыт">
+</p>
+
+---
+
+## 👋 Привет!
+
+Ты попал в репозиторий **Sharga Gaming**. Мы любительская команда по Dota 2: собираемся, чтобы играть турниры, разбирать катки и просто хорошо проводить время.
+
+Здесь нет жёстких требований и пафоса. Нужны желание играть в команде и нормальное отношение к тиммейтам.
+
+🌐 **Заходи на сайт:** [sharga-gaming.netlify.app](https://sharga-gaming.netlify.app/)
+
+---
+
+## 🏆 Чем мы занимаемся
+
+- 🎯 Играем рофло-турниры и выходим на них регулярно
+- 📈 Растём вместе: разбираем игры и делимся опытом
+- 🤝 Собираем состав из людей, с которыми приятно играть
+
+Средний рейтинг команды держится около **2200–2300 MMR**, но мы рады игрокам любого уровня, если есть желание расти.
+
+---
+
+## 🔎 Кого мы ищем
+
+Состав у нас гибкий и часто меняется, поэтому набор идёт почти всегда. Нам подходят игроки на любую позицию:
+
+- 🟢 **Керри** (*Safe Lane*)
+- 🔵 **Мид** (*Mid Lane*)
+- 🔴 **Оффлейн** (*Off Lane*)
+- 🟡 **Софт саппорт** (*Soft Support*)
+- 🟣 **Хард саппорт** (*Hard Support*)
+
+---
+
+## 🚀 Как вступить
+
+1. Открой [сайт команды](https://sharga-gaming.netlify.app/) и заполни короткую заявку: ник, позицию и MMR.
+2. Мы напишем тебе в Telegram и познакомимся.
+3. Играем вместе!
+
+Если хочется быстрее, пиши напрямую: [**Telegram**](https://t.me/dimazzzzzzzzzzz).
+
+---
+
+## 🏅 Наши достижения
+
+- 🏆 Выиграли 5 мажоров подряд
+- 🌍 Чемпионы The International 2028 в Москве
+- 🛠️ 126 героев нерфнули после наших побед (всех)
+- 🐉 1 из 5 игроков всегда знает, где Рошан, остальные четверо спрашивают в чате
+
+---
+
+## 🎨 О сайте
+
+Дизайн сайта вдохновлён стилистикой игровой платформы [**Yandex.gg**](https://yandex.gg/): тёмный фон, оранжевый акцент и крупные шрифты. Сайт одинаково удобно открывается на компьютере и на телефоне, а размещён на **Netlify**.
+
+---
+
+## 👨‍💻 Автор
+
+Сайт сделан разработчиком [**@zixuru**](https://t.me/zixuru) в соавторстве с языковой моделью **Claude AI**.
+
+---
+
+<p align="center">© Sharga Gaming · Увидимся в лобби 🎮</p>
+
+
 </p>
 
 ---
