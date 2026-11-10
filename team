@@ -1,0 +1,11 @@
+{
+  "telegram": "https://t.me/dimazzzzzzzzzzz",
+  "recruiting": true,
+  "team": [
+    { "pos": 1, "nick": "zixurru",  "mmr": 1900, "heroes": ["Sven", "Phantom Lancer", "Terrorblade"] },
+    { "pos": 2, "nick": "frons1",   "mmr": 3100, "heroes": ["Templar Assassin", "Luna", "Storm Spirit"] },
+    { "pos": 3, "nick": "Mafis",    "mmr": 1600, "heroes": ["Earthshaker", "Legion Commander", "Dragon Knight"] },
+    { "pos": 4, "nick": "Vanya",    "mmr": 1900, "heroes": ["Ringmaster", "Zeus", "Spirit Breaker"] },
+    { "pos": 5, "nick": "boomboom", "mmr": 2800, "heroes": ["Winter Wyvern", "Lich", "Shadow Shaman"] }
+  ]
+}
